@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Proxy Server Management Console</title>
+</head>
+<body>
+    <h1>Proxy Server Management Console</h1>
+    <form action="/config" method="post">
+        <label for="proxy_host">Proxy Host:</label>
+        <input type="text" id="proxy_host" name="proxy_host" value="{{ proxy_host }}" required><br><br>
+        <label for="proxy_port">Proxy Port:</label>
+        <input type="number" id="proxy_port" name="proxy_port" value="{{ proxy_port }}" required><br><br>
+        <label for="target_host">Target Host:</label>
+        <input type="text" id="target_host" name="target_host" value="{{ target_host }}" required><br><br>
+        <label for="target_port">Target Port:</label>
+        <input type="number" id="target_port" name="target_port" value="{{ target_port }}" required><br><br>
+        <input type="submit" value="Update Configuration">
+    </form>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
