@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Dialog</title>
+    <link rel="stylesheet" href="style.css"> <!-- link to external CSS file for styling -->
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form onsubmit="return login();" autocomplete="off"> <!-- add onsubmit event handler to call JavaScript function for login validation -->
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            
+            <input type="submit" value="Login">
+        </form>
+        <p class="error" id="error-msg"> <!-- add class "error" to display error messages, remove if not needed -->
+            <!-- Error messages can be displayed here if necessary -->
+        </p>
+    </div>
+    <script src="script.js"></script> <!-- link to external JavaScript file for login validation -->
+</body>
+</html>
